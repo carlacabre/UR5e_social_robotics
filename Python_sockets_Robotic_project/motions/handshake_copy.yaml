@@ -1,0 +1,45 @@
+sequence_name: handshake_student_01
+
+steps:
+  - name: init
+    motion: moveJ
+    joints_deg: [-60, -65, -100, 170, -60, 0]
+    acceleration: 1.2
+    velocity: 0.5
+    time: 4.0
+    blend: 0.0
+
+  - name: approach_handshake
+    motion: moveL
+    target_xyz_mm: [-300, -100, 100]
+    target_rpy_deg: [90, 0, 0]
+    acceleration: 1.2
+    velocity: 0.15
+    time: 3.0
+    blend: 0.0
+
+  - name: handshake
+    motion: moveL
+    target_xyz_mm: [-300, -100, 200]
+    target_rpy_deg: [90, 0, 0]
+    acceleration: 1.2
+    velocity: 0.10
+    time: 1.0
+    blend: 0.0
+
+  - name: approach_handshake
+    motion: moveL
+    target_xyz_mm: [-300, -300, 200]
+    target_rpy_deg: [90, 0, 0]
+    acceleration: 1.2
+    velocity: 0.15
+    time: 1.0
+    blend: 0.0
+
+  - name: init
+    motion: moveJ
+    joints_deg: [-60, -65, -100, 170, -60, 0]
+    acceleration: 1.2
+    velocity: 0.5
+    time: 3.0
+    blend: 0.0
